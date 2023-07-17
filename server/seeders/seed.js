@@ -1,14 +1,14 @@
 const db = require('../config/connection');
 const { User, Team, Post, Comment } = require('../models');
 const userSeeds = require('./userSeeds.json');
-const teamSeeds = require(',/teamSeeds.json')
+const teamSeeds = require('./teamSeeds.json')
 const postSeeds = require('./postSeeds.json')
 const commentSeeds = require('./commentSeeds.json')
 
-// connection.on("error", (err) => err);
+db.on("error", (err) => err);
 
-// connection.once("open", async () => {
-//   console.log("connected");
+db.once("open", async () => {
+  console.log("connected");
 //   let userCheck = await connection.db
 //     .listCollections({ name: "User" })
 //     .toArray();
@@ -38,10 +38,10 @@ const commentSeeds = require('./commentSeeds.json')
 //   }
 
 //   // create users
-//   const User = await User.insertMany(userSeedData);
+  const Userdata = await User.insertMany(userSeeds);
 
 //   //create teams
-//   const Team = await Team.insertMany(teamSeedData);
+  const Teamdata = await Team.insertMany(teamSeeds);
 
 //   for (let i = 0; i < Team.length; i++) {
 //     // Add thoughts to user
@@ -53,16 +53,16 @@ const commentSeeds = require('./commentSeeds.json')
 //     }
 
 //   //create posts
-//   const Post = await Post.insertMany(postSeedData);
+  const Postdata = await Post.insertMany(postSeeds);
 
 //   //create teams
-//   const Comment = await Comment.insertMany(commentSeedData);
+  const Commentdata = await Comment.insertMany(commentSeeds);
 
-//     console.table("Users seeded:", await User.find());
-//     console.table("Team seeded:", await Team.find());
-//     console.table("Post seeded:", await Post.find());
-//     console.table("Comment seeded:", await Comment.find());
-//     console.info("Seeding complete! 🌱");
-//     process.exit(0);
-//   });
+    console.table("Users seeded:", await User.find());
+    console.table("Team seeded:", await Team.find());
+    console.table("Post seeded:", await Post.find());
+    console.table("Comment seeded:", await Comment.find());
+    console.info("Seeding complete! 🌱");
+    process.exit(0);
+  });
     

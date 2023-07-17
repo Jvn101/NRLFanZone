@@ -4,19 +4,19 @@ const bcrypt = require('bcrypt');
 const userSchema = new Schema({
   username: {
     type: String,
-    required: true,
+    // required: true,
     unique: true,
     trim: true,
   },
   email: {
     type: String,
-    required: true,
+    // required: true,
     unique: true,
     match: [/.+@.+\..+/, 'Must match an email address!'],
   },
   password: {
     type: String,
-    required: true,
+    // required: true,
     minlength: 3,
   },
   post: [
@@ -29,16 +29,16 @@ const userSchema = new Schema({
     {
       type: Schema.Types.ObjectId,
       ref: "Team",
-      required: true,
+      // required: true,
     },
     comments: 
     [
     {
       type: Schema.Types.ObjectId,
       ref: "Comment",
-      required: true,
+      // required: true,
     },
-],
+    ],
 });
 
 // encrypt user password

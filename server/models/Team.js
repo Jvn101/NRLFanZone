@@ -8,6 +8,18 @@ const teamSchema = new Schema({
     unique: true,
     trim: true,
   },
+  teamusers: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+      }
+    ],
+  fanPost: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'fanPost'
+      }
+    ]
 });
 
 

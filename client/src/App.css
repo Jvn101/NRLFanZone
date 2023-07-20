@@ -90,7 +90,12 @@ button {
   color: white;
   text-decoration: underline;
 }
-footer{
-  background: #f6f6f6;
-  
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #15c249;
+  color: white;
+  text-align: center;
 }

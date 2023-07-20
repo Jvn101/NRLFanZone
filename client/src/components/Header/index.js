@@ -17,9 +17,14 @@ const Header = () => {
           </Link> } */}
           <h1 className="m-0">Header Contents</h1>
         </div>
+        <Link className="btn btn-lg btn-info m-2" to="/">
+                Home Area
+              </Link>
+              <br/>
         <div>
           {Auth.loggedIn() ? (
             <>
+            
               <Link className="btn btn-lg btn-info m-2" to="/me">
                 {Auth.getProfile().data.username}'s Posts
               </Link>

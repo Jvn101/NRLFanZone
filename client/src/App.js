@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import  Login  from "./pages/login";
 import Register from "./pages/Register";
 import Team from './pages/teams';
+import SingleTeam from './pages/singleTeam';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -44,7 +45,7 @@ function App() {
                   path="/" 
                   element={<Team />} 
                 />
-                {/* Create a route to display a single thought's comments based on its `thoughtId` provided in the URL */}
+                
                 <Route 
                   path="/login" 
                   element={<Login />} 
@@ -52,6 +53,10 @@ function App() {
                 <Route 
                   path="/register" 
                   element={<Register />} 
+                />
+                <Route 
+                  path="/teams/teamId" 
+                  element={<singleTeam />} 
                 />
               </Routes>
             </div>

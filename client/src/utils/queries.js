@@ -7,6 +7,14 @@ export const QUERY_SINGLE_TEAM = gql`
       _id
       name
       fanPost
+      thoughtAuthor
+      createdAt
+      comments {
+        _id
+        commentText
+        commentAuthor
+        createdAt
+      }
      
     }
   }

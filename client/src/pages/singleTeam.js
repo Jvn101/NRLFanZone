@@ -19,7 +19,7 @@ const SingleTeam = () => {
   });
 
   const team = data?.team || {};
-  console.log(team);
+  console.log(team.name);
   if (loading) {
     return <div>Loading...</div>;
   }

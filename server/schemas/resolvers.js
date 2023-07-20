@@ -40,6 +40,23 @@ const resolvers = {
 
       return { token, user };
     },
+    addComment: async (parent, { teamId, commentText }, context) => {
+      if (context.user) {
+        return Team.findOneAndUpdate(
+          { _id: teamId },
+          {
+            $addToSet: {
+              comments: { commentText, commentAuthor: context.user.username },
+            },
+          },
+          {
+            new: true,
+            runValidators: true,
+          }
+        );
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
   }
 };
 

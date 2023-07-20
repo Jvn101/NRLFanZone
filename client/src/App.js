@@ -55,8 +55,8 @@ function App() {
                   element={<Register />} 
                 />
                 <Route 
-                  path="/teams/teamId" 
-                  element={<singleTeam />} 
+                  path="/teams/:teamId" 
+                  element={<SingleTeam />} 
                 />
               </Routes>
             </div>

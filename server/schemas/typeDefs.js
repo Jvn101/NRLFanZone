@@ -21,9 +21,9 @@ const typeDefs = gql`
 
   type Comment {
     _id: ID
-    description: String
-    author: String
-    user: User
+    commentText: String
+    commentAuthor: String
+    createdAt: String
   }
 
   type FanPost {
@@ -48,6 +48,7 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
+    addComment(teamId: ID!, commentText: String!): Team
   }
 `;
 

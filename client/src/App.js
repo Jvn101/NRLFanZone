@@ -4,11 +4,16 @@ import React from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider ,createHttpLink,} from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { NavBar } from "./components/NavBar";
+import { Banner } from "./components/Banner";
+import { Projects } from "./components/Projects";
+import { Footer } from "./components/Footer";
+
 import  Login  from "./pages/login";
 import Register from "./pages/Register";
 import Team from './pages/teams';
 import Header from './components/Header';
-import Footer from './components/Footer';
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',

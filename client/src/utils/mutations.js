@@ -20,3 +20,18 @@ export const ADD_USER = gql`
     }
   }
 `;
+export const ADD_COMMENT = gql`
+  mutation addComment($teamId: ID!, $commentText: String!) {
+    addComment(teamId: $teamId, commentText: $commentText) {
+      _id
+      name
+      fanPost
+      createdAt
+      comments {
+        _id
+        commentText
+        createdAt
+      }
+    }
+  }
+`;

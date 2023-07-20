@@ -15,13 +15,17 @@ const Header = () => {
           {/* { <Link className="text-light" to="/">
             <h1 className="m-0">Tech Thoughts</h1>
           </Link> } */}
-          <h1 className="m-0">Header Contents</h1>
+          {/* <p className="m-0">Header Contents</p> */}
+          
         </div>
-        <Link className="btn btn-lg btn-info m-2" to="/">
-                Home Area
-              </Link>
-              <br/>
+        
+        
         <div>
+
+        <Link className="btn btn-lg btn-info m-2" to="/">
+                <button>Home Area</button>
+        </Link>
+        &nbsp;
           {Auth.loggedIn() ? (
             <>
             
@@ -38,7 +42,7 @@ const Header = () => {
                 Ladder
               </Link> */}
               <Link className="btn btn-lg btn-info m-2" to="/register">
-                Members Area
+                <button>Members Area</button>
               </Link>
               
             </>

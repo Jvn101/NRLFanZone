@@ -4,8 +4,11 @@ import React from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider ,createHttpLink,} from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './pages/login';
+import  Login  from "./pages/login";
+import Register from "./pages/Register";
 import Team from './pages/teams';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -29,11 +32,12 @@ const client = new ApolloClient({
 });
 
 function App() {
+  
   return (
       <ApolloProvider client={client}>
         <Router>
           <div className="flex-column justify-flex-start min-100-vh">
-            {/* <Header /> */}
+            <Header />
             <div className="container">
               <Routes>
                 <Route 
@@ -45,9 +49,13 @@ function App() {
                   path="/login" 
                   element={<Login />} 
                 />
+                <Route 
+                  path="/register" 
+                  element={<Register />} 
+                />
               </Routes>
             </div>
-            {/* <Footer /> */}
+            <Footer />
           </div>
         </Router>
       </ApolloProvider>

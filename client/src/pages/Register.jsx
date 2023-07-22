@@ -93,7 +93,7 @@ const Signup = (props) => {
           </div>
         )}
         <a href="/login"><button className="link-btn">Already an NRLFanZone Member</button></a>
-        {/* <button className="link-btn" onClick={() => props.onFormSwitch('Register')}>Don't have an account? Register here.</button> */}
+        <button className="link-btn" onClick={() => props.onFormSwitch('Register')}>Don't have an account? Register here.</button>
         {/* { currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />} */}
     </div>
     // </div>

@@ -9,6 +9,7 @@ import Register from "./pages/Register";
 import Team from './pages/teams';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Stripe from './pages/stripe';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -54,6 +55,10 @@ function App() {
                   element={<Register />} 
                 />
               </Routes>
+                <Route
+                path="/stripe"
+                element={<Stripe/>}
+                />
             </div>
             <Footer />
           </div>

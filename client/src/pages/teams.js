@@ -1,4 +1,5 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 // import { useQuery } from '@apollo/client';
 
 // import ThoughtList from '../components/ThoughtList';
@@ -9,6 +10,8 @@ import React from 'react';
 const Team = () => {
 //   const { loading, data } = useQuery(QUERY_THOUGHTS);
 //   const thoughts = data?.thoughts || [];
+
+const { teamId } = useParams();
 
   return (
     <main>
@@ -29,6 +32,7 @@ const Team = () => {
               title="Some Feed for Thought(s)..."
             />
           )} */}
+          Viewing details for team {teamId}
         </div>
       </div>
     </main>

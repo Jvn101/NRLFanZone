@@ -5,13 +5,16 @@ const postSchema = new Schema({
   title: {
     type: String,
     required: true,
-    unique: true,
   },
   description: {
     type: String,
     required: true,
-    unique: true,
   },
+  team: {
+    type: Schema.Types.ObjectId,
+      ref: "Team",
+      required: true,
+  }
 });
 
 

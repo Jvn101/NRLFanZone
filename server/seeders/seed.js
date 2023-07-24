@@ -9,6 +9,10 @@ db.on("error", (err) => err);
 
 db.once("open", async () => {
   console.log("connected");
+  await User.deleteMany()
+  await Team.deleteMany()
+  await Post.deleteMany()
+  await Comment.deleteMany()
 //   let userCheck = await connection.db
 //     .listCollections({ name: "User" })
 //     .toArray();
@@ -38,7 +42,8 @@ db.once("open", async () => {
 //   }
 
 //   // create users
-  const Userdata = await User.insertMany(userSeeds);
+await User.insertMany(userSeeds);
+console.table("Users seeded:", await User.find());
 
 //   //create teams
   const Teamdata = await Team.insertMany(teamSeeds);
@@ -53,12 +58,13 @@ db.once("open", async () => {
 //     }
 
 //   //create posts
-  const Postdata = await Post.insertMany(postSeeds);
+  const postsWithIds = postSeeds.map(post=> { return {...post, team: Teamdata[Math.floor(Math.random()*Teamdata.length)]._id}})
+await Post.insertMany(postsWithIds);
 
 //   //create teams
-  const Commentdata = await Comment.insertMany(commentSeeds);
+await Comment.insertMany(commentSeeds);
 
-    console.table("Users seeded:", await User.find());
+   
     console.table("Team seeded:", await Team.find());
     console.table("Post seeded:", await Post.find());
     console.table("Comment seeded:", await Comment.find());

@@ -42,6 +42,7 @@ const typeDefs = gql`
     team: [Team]
     user: [User]
     fanPost: [FanPost]
+    postbyteam(teamid: ID!): [FanPost]
   }
 
 

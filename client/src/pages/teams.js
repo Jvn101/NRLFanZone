@@ -1,17 +1,18 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-// import { useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 
 // import ThoughtList from '../components/ThoughtList';
-// import ThoughtForm from '../components/ThoughtForm';
+import ThoughtForm from '../components/ThoughtForm';
 
-// import { QUERY_THOUGHTS } from '../utils/queries';
+import { QUERY_THOUGHTBYTEAM } from '../utils/queries';
 
 const Team = () => {
-//   const { loading, data } = useQuery(QUERY_THOUGHTS);
-//   const thoughts = data?.thoughts || [];
+  const { teamId } = useParams();
+const { loading, data } = useQuery(QUERY_THOUGHTBYTEAM, {variables: {teamId}});
+const thoughts = data?.thoughts || [];
 
-const { teamId } = useParams();
+console.log(data)
 
   return (
     <main>
@@ -21,7 +22,7 @@ const { teamId } = useParams();
           style={{ border: '1px dotted #1a1a1a' }}
         >
           <h3>Teams List Page</h3>
-          {/* <ThoughtForm /> */}
+          <ThoughtForm />
         </div>
         <div className="col-12 col-md-8 mb-3">
           {/* {loading ? (

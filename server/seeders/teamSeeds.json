@@ -1,50 +1,70 @@
 [
     {
-      "name": "Brisbane Broncos"
+      "name": "Brisbane Broncos",
+      "index": 0
     },
     {
-      "name": "Canterbury-Bankstown Bulldogs"
+      "name": "Canterbury-Bankstown Bulldogs",
+      "index": 1
     },
     {
-      "name": "West Tigers"
+      "name": "West Tigers",
+      "index": 
     },
     {
-      "name": "St George Dragons"
+      "name": "St George Dragons",
+      "index": 4
     },
     {
-      "name": "Sydney Roosters"
+      "name": "Sydney Roosters",
+      "index": 10
     },
     {
-      "name": "North Queensland Cowboys"
+      "name": "North Queensland Cowboys",
+      "index": 2
     },
     {
-      "name": "South Sydney Rabbitohs"
+      "name": "South Sydney Rabbitohs",
+      "index": 8
     },
     {
-      "name": "Manly Sea Eagles"
+      "name": "Manly Sea Eagles",
+      "index": 11
     },
     {
-      "name": "Newcastle Knights"
+      "name": "Newcastle Knights",
+      "index": 6
     },
     {
-      "name": "Gold Coast Titans"
+      "name": "Gold Coast Titans",
+      "index": 14
     },
     {
-      "name": "Parramatta Eels"
+      "name": "Parramatta Eels",
+      "index": 5
     },
     {
-      "name": "Penrith Panthers"
+      "name": "Penrith Panthers",
+      "index": 7
     },
     {
-      "name": "Melbourne Storm"
+      "name": "Melbourne Storm",
+      "index": 13
     },
     {
-      "name": "Cronulla Sharks"
+      "name": "Cronulla Sharks",
+      "index": 12
     },
     {
-      "name": "Canberra Raiders"
+      "name": "Canberra Raiders",
+      "index": 9
     },
     {
-      "name":"Redcliffe Dolphins"
+      "name":"Redcliffe Dolphins",
+      "index": 3
+    }
+    {
+      "name":"New Zealand Warriors",
+      "index": 15
     }
   ]

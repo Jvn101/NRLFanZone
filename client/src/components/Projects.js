@@ -20,6 +20,8 @@ import titans from "../assets/nrl teams/titans.jpg";
 import warriors from "../assets/nrl teams/warriors.jpg";
 import westtigers from "../assets/nrl teams/Wests-Tigers.jpg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import Auth from '../utils/auth';
+import { Link } from 'react-router-dom';
 // import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import { Routes, Route } from 'react-router-dom';
@@ -132,7 +134,9 @@ export const Projects = () => {
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
                       <Row>
-                        {
+                      {Auth.loggedIn() ? (
+            <>
+                      {
                           projects.map((project, index) => {
 
                             const projectWithIndex = {...project, index};
@@ -145,6 +149,20 @@ export const Projects = () => {
                             )
                           })
                         }
+            </>
+                    ) : (
+            <>
+
+              <Link to='/register'>
+                <button className="vvd"><span>Members Area</span></button>
+              </Link>
+
+              </>
+          )}
+
+
+
+                        
                       </Row>
                     </Tab.Pane>
                   </Tab.Content>

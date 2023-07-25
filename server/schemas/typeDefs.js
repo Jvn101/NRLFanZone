@@ -3,9 +3,9 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
   type Team {
     _id: ID
-    name: String
-    teamusers: [User]
-    fanPost: [FanPost]
+    title: String
+    description: String
+    imgUrl: String
    
   }
 

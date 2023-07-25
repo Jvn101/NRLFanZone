@@ -1,50 +1,87 @@
 [
-    {
-      "name": "Brisbane Broncos"
-    },
-    {
-      "name": "Canterbury-Bankstown Bulldogs"
-    },
-    {
-      "name": "West Tigers"
-    },
-    {
-      "name": "St George Dragons"
-    },
-    {
-      "name": "Sydney Roosters"
-    },
-    {
-      "name": "North Queensland Cowboys"
-    },
-    {
-      "name": "South Sydney Rabbitohs"
-    },
-    {
-      "name": "Manly Sea Eagles"
-    },
-    {
-      "name": "Newcastle Knights"
-    },
-    {
-      "name": "Gold Coast Titans"
-    },
-    {
-      "name": "Parramatta Eels"
-    },
-    {
-      "name": "Penrith Panthers"
-    },
-    {
-      "name": "Melbourne Storm"
-    },
-    {
-      "name": "Cronulla Sharks"
-    },
-    {
-      "name": "Canberra Raiders"
-    },
-    {
-      "name":"Redcliffe Dolphins"
-    }
-  ]
+  {
+    "title": "Brisbane Broncos",
+    "description": "Suncorp Stadium",
+    "imgUrl": "./broncos"
+  },
+  {
+    "title": "Canterbury Bulldogs",
+    "name": "Belmore Sports Ground",
+    "imgUrl": "./bulldogs"
+  },
+  {
+    "title": "North Queensland Cowboys",
+    "description": "Queensland Country Bank Stadium",
+    "imgUrl": "./cowboys"
+  },
+  {
+    "title": "Redcliffe Dolphins",
+    "description": "Moreton Daily Stadium",
+    "imgUrl": "./dolphins"
+  },
+  {
+    "title": "St. George Illawarra Dragons",
+    "description": "WIN Stadium",
+    "imgUrl": "./dragons"
+  },
+  {
+    "title": "Paramatta Eels",
+    "description": "CommBank Stadium",
+    "imgUrl": "./eels"
+  },
+  {
+    "title": "Newcastle Knights",
+    "description": "McDonald Jones Stadium",
+    "imgUrl": "./knights"
+  },
+  {
+    "title": "Penrith Panthers",
+    "description": "BlueBet Stadium",
+    "imgUrl": "./panthers"
+  },
+  {
+    "title": "South Sydney Rabbitohs",
+    "description": "Accor Stadium",
+    "imgUrl": "./rabbitohs"
+  },
+  {
+    "title": "Canberra Raiders",
+    "description": "GIO Stadium Canberra",
+    "imgUrl": "./raiders"
+  },
+  {
+    "title": "Sydney Roosters",
+    "description": "Sydney Cricket Ground",
+    "imgUrl": "./roosters"
+  },
+  {
+    "title": "Manly Warringah Sea Eagles",
+    "description": "Brookvale Oval",
+    "imgUrl": "./seaeagles"
+  },
+  {
+    "title": "Cronulla Sutherland Sharks",
+    "description": "PointsBet Stadium (Shark Park)",
+    "imgUrl": "./sharks"
+  },
+  {
+    "title": "Melbourne Storm",
+    "description": "AAMI Park",
+    "imgUrl": "./storm"
+  },
+  {
+    "title": "Gold Coast Titans",
+    "description": "Cbus Super Stadium",
+    "imgUrl": "./titans"
+  },
+  {
+    "title": "New Zealand Warriors",
+    "description": "Go Media Stadium Mt Smart",
+    "imgUrl": "./warriors"
+  },
+  {
+    "title": "Wests Tigers",
+    "description": "Campbelltown Stadium",
+    "imgUrl": "./westtigers"
+  }
+]

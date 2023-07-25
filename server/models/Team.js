@@ -2,24 +2,20 @@ const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const teamSchema = new Schema({
-  name: {
+  title: {
     type: String,
     required: true,
     unique: true,
     trim: true,
   },
-  teamusers: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: 'User'
-      }
-    ],
-  fanPost: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: 'fanPost'
-      }
-    ]
+  description: {
+    type: String,
+    trim: true
+  },
+  imgUrl: {
+    type: String,
+    trim: true
+  }
 });
 
 

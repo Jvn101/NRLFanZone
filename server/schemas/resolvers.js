@@ -6,7 +6,7 @@ const { AuthenticationError } = require('apollo-server-express');
 const resolvers = {
   Query: {
     team: async () => {
-      return await Team.find({}).populate('teamusers');
+      return await Team.find({});
     },
     user: async () => {
       return await User.find({});

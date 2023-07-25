@@ -1,13 +1,13 @@
 import { gql } from '@apollo/client';
 
 
-export const QUERY_THOUGHTS = gql`
-query getThoughts($Team: ID) {
-    FanPost(Team: $Team) {
+export const QUERY_TEAMS = gql`
+query getTeams {
+    team {
       _id
       title
       description
-      team
+      imgUrl
     }
   }
 `;

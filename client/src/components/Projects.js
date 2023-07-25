@@ -2,118 +2,31 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project1.png";
 import projImg2 from "../assets/img/project2.png";
-import broncos from "../assets/nrl teams/broncos.jpg";
-import bulldogs from "../assets/nrl teams/bulldogs.jpg";
-import cowboys from "../assets/nrl teams/cowboys.jpg";
-import dolphins from "../assets/nrl teams/dolphins.jpg";
-import dragons from "../assets/nrl teams/dragons.jpg";
-import eels from "../assets/nrl teams/eels.jpg";
-import knights from "../assets/nrl teams/knights.jpg";
-import panthers from "../assets/nrl teams/panthers.jpg";
-import rabbitohs from "../assets/nrl teams/rabbitohs.jpg";
-import raiders from "../assets/nrl teams/raiders.jpg";
-import roosters from "../assets/nrl teams/roosters.jpg";
-import seaeagles from "../assets/nrl teams/seaeagles.jpg";
-import sharks from "../assets/nrl teams/sharks.jpg";
-import storm from "../assets/nrl teams/storm.jpg";
-import titans from "../assets/nrl teams/titans.jpg";
-import warriors from "../assets/nrl teams/warriors.jpg";
-import westtigers from "../assets/nrl teams/Wests-Tigers.jpg";
+import { QUERY_TEAMS } from '../utils/queries';
 import colorSharp2 from "../assets/img/color-sharp2.png";
 // import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import { Routes, Route } from 'react-router-dom';
+import Auth from '../utils/auth';
+import { Link } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
+import { useState, useEffect } from "react";
 
 export const Projects = () => {
+  const [teams, setTeams] = useState();
 
-  const projects = [
-    {
-      title: "Brisbane Broncos",
-      description: "Suncorp Stadium",
-      imgUrl: broncos,
-    },
-    {
-      title: "Canterbury Bulldogs",
-      description: "Belmore Sports Ground",
-      imgUrl: bulldogs,
-    },
-    {
-      title: "North Queensland Cowboys",
-      description: "Queensland Country Bank Stadium",
-      imgUrl: cowboys,
-    },
-    {
-      title: "Redcliffe Dolphins",
-      description: "Moreton Daily Stadium",
-      imgUrl: dolphins,
-    },
-    {
-      title: "St. George Illawarra Dragons",
-      description: "WIN Stadium",
-      imgUrl: dragons,
-    },
-    {
-      title: "Paramatta Eels",
-      description: "CommBank Stadium",
-      imgUrl: eels,
-    },
-    {
-      title: "Newcastle Knights",
-      description: "McDonald Jones Stadium",
-      imgUrl: knights,
-    },
-    {
-      title: "Penrith Panthers",
-      description: "BlueBet Stadium",
-      imgUrl: panthers,
-    },
-    {
-      title: "South Sydney Rabbitohs",
-      description: "Accor Stadium",
-      imgUrl: rabbitohs,
-    },
-    {
-      title: "Canberra Raiders",
-      description: "GIO Stadium Canberra",
-      imgUrl: raiders,
-    },
-    {
-      title: "Sydney Roosters",
-      description: "Sydney Cricket Ground",
-      imgUrl: roosters,
-    },
-    {
-      title: "Manly Warringah Sea Eagles",
-      description: "Brookvale Oval",
-      imgUrl: seaeagles,
-    },
-    {
-      title: "Cronulla Sutherland Sharks",
-      description: "PointsBet Stadium (Shark Park)",
-      imgUrl: sharks,
-    },
-    {
-      title: "Melbourne Storm",
-      description: "AAMI Park",
-      imgUrl: storm,
-    },
-    {
-      title: "Gold Coast Titans",
-      description: "Cbus Super Stadium",
-      imgUrl: titans,
-    },
-    {
-      title: "New Zealand Warriors",
-      description: "Go Media Stadium Mt Smart",
-      imgUrl: warriors,
-    },
-    {
-      title: "Wests Tigers",
-      description: "Campbelltown Stadium",
-      imgUrl: westtigers,
-    },
-
-  ];
+  const { loading, data } = useQuery(QUERY_TEAMS);
+  // console.log("teams",teams);
+  // const teams= data.team;
+  useEffect(() => {
+    for (let item in data) {
+      if (Array.isArray(data[item])) {
+        setTeams(data[item]);
+      }
+    }
+    console.log(teams);
+  }, [data]);
+  console.log(data);
 
   return (
     <section className="project" id="project">
@@ -131,20 +44,39 @@ export const Projects = () => {
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
-                      <Row>
-                        {
-                          projects.map((project, index) => {
+                    <Row>
+                      {Auth.loggedIn() ? (
+            <>
+                      {
+                        
+                          teams && teams.map((team, index) => {
 
-                            const projectWithIndex = {...project, index};
+                            const teamsWithId = {...team, index};
 
                             return (
                               <ProjectCard
                                 key={index}
-                                {...projectWithIndex}
+                                {...teamsWithId}
                                 />
                             )
                           })
                         }
+            </>
+                    ) : (
+            <>
+
+              {/* <Link to='/register'>
+                <button className="vvd"><span>Members Area</span></button>
+              </Link> */}
+              {/* <div class= 'notLoggedIn'>
+              <h3>Login to the members area for KICK OFF!</h3>
+              </div> */}
+              </>
+          )}
+
+
+
+                        
                       </Row>
                     </Tab.Pane>
                   </Tab.Content>

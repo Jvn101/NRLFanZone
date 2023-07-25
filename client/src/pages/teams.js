@@ -12,7 +12,7 @@ const Team = () => {
 const { loading, data } = useQuery(QUERY_THOUGHTBYTEAM, {variables: {teamId}});
 const thoughts = data?.thoughts || [];
 
-console.log(data)
+console.log(data);
 
   return (
     <main>
@@ -22,7 +22,7 @@ console.log(data)
           style={{ border: '1px dotted #1a1a1a' }}
         >
           <h3>Teams List Page</h3>
-          <ThoughtForm />
+          {/* <ThoughtForm /> */}
         </div>
         <div className="col-12 col-md-8 mb-3">
           {/* {loading ? (

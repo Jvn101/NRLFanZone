@@ -48,17 +48,18 @@ export const Projects = () => {
                       {Auth.loggedIn() ? (
             <>
                       {
-                          // teams.map((team, index) => {
+                        
+                          teams && teams.map((team, index) => {
 
-                          //   const teamsWithId = {...team, index};
+                            const teamsWithId = {...team, index};
 
-                          //   return (
-                          //     <ProjectCard
-                          //       key={team._id}
-                          //       {...teamsWithId}
-                          //       />
-                          //   )
-                          // })
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...teamsWithId}
+                                />
+                            )
+                          })
                         }
             </>
                     ) : (

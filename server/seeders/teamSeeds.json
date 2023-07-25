@@ -2,86 +2,86 @@
   {
     "title": "Brisbane Broncos",
     "description": "Suncorp Stadium",
-    "imgUrl": "./broncos"
+    "imgUrl": "./broncos.jpg"
   },
   {
     "title": "Canterbury Bulldogs",
     "name": "Belmore Sports Ground",
-    "imgUrl": "./bulldogs"
+    "imgUrl": "./bulldogs.jpg"
   },
   {
     "title": "North Queensland Cowboys",
     "description": "Queensland Country Bank Stadium",
-    "imgUrl": "./cowboys"
+    "imgUrl": "./cowboys.jpg"
   },
   {
     "title": "Redcliffe Dolphins",
     "description": "Moreton Daily Stadium",
-    "imgUrl": "./dolphins"
+    "imgUrl": "./dolphins.jpg"
   },
   {
     "title": "St. George Illawarra Dragons",
     "description": "WIN Stadium",
-    "imgUrl": "./dragons"
+    "imgUrl": "./dragons.jpg"
   },
   {
     "title": "Paramatta Eels",
     "description": "CommBank Stadium",
-    "imgUrl": "./eels"
+    "imgUrl": "./eels.jpg"
   },
   {
     "title": "Newcastle Knights",
     "description": "McDonald Jones Stadium",
-    "imgUrl": "./knights"
+    "imgUrl": "./knights.jpg"
   },
   {
     "title": "Penrith Panthers",
     "description": "BlueBet Stadium",
-    "imgUrl": "./panthers"
+    "imgUrl": "./panthers.jpg"
   },
   {
     "title": "South Sydney Rabbitohs",
     "description": "Accor Stadium",
-    "imgUrl": "./rabbitohs"
+    "imgUrl": "./rabbitohs.jpg"
   },
   {
     "title": "Canberra Raiders",
     "description": "GIO Stadium Canberra",
-    "imgUrl": "./raiders"
+    "imgUrl": "./raiders.jpg"
   },
   {
     "title": "Sydney Roosters",
     "description": "Sydney Cricket Ground",
-    "imgUrl": "./roosters"
+    "imgUrl": "./roosters.jpg"
   },
   {
     "title": "Manly Warringah Sea Eagles",
     "description": "Brookvale Oval",
-    "imgUrl": "./seaeagles"
+    "imgUrl": "./seaeagles.jpg"
   },
   {
     "title": "Cronulla Sutherland Sharks",
     "description": "PointsBet Stadium (Shark Park)",
-    "imgUrl": "./sharks"
+    "imgUrl": "./sharks.jpg"
   },
   {
     "title": "Melbourne Storm",
     "description": "AAMI Park",
-    "imgUrl": "./storm"
+    "imgUrl": "./storm.jpg"
   },
   {
     "title": "Gold Coast Titans",
     "description": "Cbus Super Stadium",
-    "imgUrl": "./titans"
+    "imgUrl": "./titans.jpg"
   },
   {
     "title": "New Zealand Warriors",
     "description": "Go Media Stadium Mt Smart",
-    "imgUrl": "./warriors"
+    "imgUrl": "./warriors.jpg"
   },
   {
     "title": "Wests Tigers",
     "description": "Campbelltown Stadium",
-    "imgUrl": "./westtigers"
+    "imgUrl": "./Wests-Tigers.jpg"
   }
 ]

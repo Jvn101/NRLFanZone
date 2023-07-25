@@ -3,7 +3,8 @@ import { useMutation } from '@apollo/client';
 
 import { ADD_TEAMPOST } from '../utils/mutations';
 
-const TeamPostForm = () => {
+const TeamPostForm = ({teamId}) => {
+
   const [formState, setFormState] = useState({
     title: '',
     description: '',
@@ -20,15 +21,15 @@ const TeamPostForm = () => {
     // It is important that the object fields are match the defined parameters in `ADD_THOUGHT` mutation
     try {
       const { data } = addTeamPost({
-        variables: { ...formState },
+        variables: { ...formState, teamId },
       });
-      
+
       // window.location.reload();
     } catch (err) {
       console.error(err);
     }
   };
-  
+
   const handleChange = (event) => {
     const { name, value } = event.target;
 

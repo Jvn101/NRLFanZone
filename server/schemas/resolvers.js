@@ -56,8 +56,14 @@ const resolvers = {
 
       return { token, user };
     },
-    addTeamPost: async (parent, { title, description }) => {
-      return Post.create({ title, description });
+    addTeamPost: async (parent, { title, description, teamId }) => {
+      try {
+        return (await Post.create({ title, description, team: teamId }));
+      } catch (error) {
+        console.error('error');
+        console.error(error);
+      }
+      
     },
   }
 };

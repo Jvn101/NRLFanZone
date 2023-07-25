@@ -26,11 +26,11 @@ const typeDefs = gql`
     user: User
   }
 
-  type FanPost {
+  type Post {
     _id: ID
     title: String 
     description: String
-    team: Team
+    team: [Team]
   }
 
   type Auth {
@@ -41,12 +41,13 @@ const typeDefs = gql`
   type Query {
     team: [Team]
     user: [User]
-    fanPost: [FanPost]
-    postbyteam(teamid: ID!): [FanPost]
+    post: [Post]
+    postbyteam(teamid: ID!): [Post]
   }
 
 
   type Mutation {
+    addTeamPost(title: String!, description: String!): Post
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
   }

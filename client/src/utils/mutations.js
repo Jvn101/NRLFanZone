@@ -20,4 +20,15 @@ export const ADD_USER = gql`
     }
   }
 `;
+export const ADD_TEAMPOST = gql`
+  mutation addTeamPost($title: String!, $description: String!) {
+    addTeamPost(title: $title, description: $description) {
+      _id
+      title
+      description
+      team
+      
+    }
+  }
+`;
 

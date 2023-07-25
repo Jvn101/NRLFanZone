@@ -65,12 +65,12 @@ export const Projects = () => {
                     ) : (
             <>
 
-              {/* <Link to='/register'>
+              <Link to='/register'>
                 <button className="vvd"><span>Members Area</span></button>
-              </Link> */}
-              {/* <div class= 'notLoggedIn'>
+              </Link>
+              <div class= 'notLoggedIn'>
               <h3>Login to the members area for KICK OFF!</h3>
-              </div> */}
+              </div>
               </>
           )}
 

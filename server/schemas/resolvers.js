@@ -11,10 +11,10 @@ const resolvers = {
     user: async () => {
       return await User.find({});
     },
-    fanPost: async () => {
-      // Populate the classes subdocument on every instance of Professor
-      return await Post.find({}).populate('team');
-    },
+    // fanPost: async () => {
+    //   // Populate the classes subdocument on every instance of Professor
+    //   return await Post.find({}).populate('team');
+    // },
     postbyteam: async (parent, {teamid}) => {
       return await Post.find({team: teamid}).populate('team');
     }
@@ -55,6 +55,9 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
+    },
+    addTeamPost: async (parent, { title, description }) => {
+      return Post.create({ title, description });
     },
   }
 };

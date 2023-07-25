@@ -26,7 +26,11 @@ export const ADD_TEAMPOST = gql`
       _id
       title
       description
-      team
+      team {
+        _id
+        title
+      }
+      
       
     }
   }

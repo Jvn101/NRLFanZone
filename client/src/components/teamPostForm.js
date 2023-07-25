@@ -23,7 +23,7 @@ const TeamPostForm = () => {
         variables: { ...formState },
       });
       
-      window.location.reload();
+      // window.location.reload();
     } catch (err) {
       console.error(err);
     }

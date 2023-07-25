@@ -10,7 +10,7 @@ import { QUERY_THOUGHTBYTEAM } from '../utils/queries';
 
 const Team = () => {
   const { teamId } = useParams();
-const { loading, data } = useQuery(QUERY_THOUGHTBYTEAM, {variables: {teamId}});
+const { loading, data } = useQuery(QUERY_THOUGHTBYTEAM, {variables: {teamid: teamId}});
 const teamPosts = data?.postbyteam || [];
 
 useEffect(() => {

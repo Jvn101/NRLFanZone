@@ -3,16 +3,16 @@ import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
 // import ThoughtList from '../components/ThoughtList';
-import ThoughtForm from '../components/ThoughtForm';
+import TeamPostForm from '../components/teamPostForm';
 
 import { QUERY_THOUGHTBYTEAM } from '../utils/queries';
 
 const Team = () => {
   const { teamId } = useParams();
 const { loading, data } = useQuery(QUERY_THOUGHTBYTEAM, {variables: {teamId}});
-const thoughts = data?.thoughts || [];
+const teamPosts = data?.thoughts || [];
 
-console.log(data);
+console.log("data",teamPosts);
 
   return (
     <main>
@@ -22,7 +22,7 @@ console.log(data);
           style={{ border: '1px dotted #1a1a1a' }}
         >
           <h3>Teams List Page</h3>
-          {/* <ThoughtForm /> */}
+          <TeamPostForm />
         </div>
         <div className="col-12 col-md-8 mb-3">
           {/* {loading ? (

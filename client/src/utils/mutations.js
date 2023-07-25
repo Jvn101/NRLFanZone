@@ -21,8 +21,8 @@ export const ADD_USER = gql`
   }
 `;
 export const ADD_TEAMPOST = gql`
-  mutation addTeamPost($title: String!, $description: String!) {
-    addTeamPost(title: $title, description: $description) {
+  mutation addTeamPost($title: String!, $description: String!, $teamId: ID!) {
+    addTeamPost(title: $title, description: $description, teamId: $teamId) {
       _id
       title
       description
@@ -35,4 +35,3 @@ export const ADD_TEAMPOST = gql`
     }
   }
 `;
-

@@ -22,7 +22,7 @@ console.log("data",teamPosts);
           style={{ border: '1px dotted #1a1a1a' }}
         >
           <h3>Teams List Page</h3>
-          <TeamPostForm />
+          <TeamPostForm teamId={teamId}/>
         </div>
         <div className="col-12 col-md-8 mb-3">
           {/* {loading ? (

@@ -30,8 +30,6 @@ export const ADD_TEAMPOST = gql`
         _id
         title
       }
-      
-      
     }
   }
 `;
@@ -43,7 +41,7 @@ mutation updateTeamPost($postId: ID!, $title: String!, $description: String!, $t
     description
   }
 }
-}
+
 `;
 
 

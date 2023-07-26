@@ -1,22 +1,26 @@
 const mongoose = require('mongoose');
+// const app = express();
+// app.use(cors());
 // const { MongoClient, ServerApiVersion } = require('mongodb');
 
-const MONGO_HOSTNAME = process.env.MONGO_HOSTNAME;
-const MONGO_PORT = process.env.MONGO_PORT;
-const MONGO_DB = process.env.MONGO_DB;
+// const MONGO_HOSTNAME = process.env.MONGO_HOSTNAME;
+// const MONGO_PORT = process.env.MONGO_PORT;
+// const MONGO_DB = process.env.MONGO_DB;
 
-const DB_URL = `mongodb://${MONGO_HOSTNAME}:${MONGO_PORT}/${MONGO_DB}`
+// const DB_URL = `mongodb://${MONGO_HOSTNAME}:${MONGO_PORT}/${MONGO_DB}`
 
 
-if(process.env.NODE_ENV === 'production') {
-  db.connect(process.env.MONGODB_URI);
-} else {
-  db.connect(DB_URL);
-}
+// if(process.env.NODE_ENV === 'production') {
+//   db.connect(process.env.MONGODB_URI);
+// } else {
+//   db.connect(DB_URL);
+// }
+
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://jasmine1:jasmine1@nrlzone.yd574lc.mongodb.net/');
 
 
 // mongoose.connect(
-//   process.env.MONGODB_URI || 
+//   process.env.MONGODB_URI || 'mongodb+srv://jasmine:<Jasmine14>@nrlfanzone.hvipevd.mongodb.net/?retryWrites=true&w=majority',
 
 //   //mongodb://127.0.0.1:27017/NRLZone
 //   {

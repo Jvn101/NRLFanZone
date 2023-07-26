@@ -9,7 +9,6 @@
     "seed": "node seeders/seed.js",
     "watch": "nodemon server.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
-
   },
   "keywords": [],
   "author": "",
@@ -21,9 +20,7 @@
     "graphql": "^16.3.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.8",
-    "nodemon": "^3.0.1"
-  },
-  "devDependencies": {
+    "npm": "^9.8.1",
     "nodemon": "^3.0.1"
   }
 }

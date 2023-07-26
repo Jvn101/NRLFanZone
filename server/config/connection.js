@@ -16,7 +16,9 @@ const mongoose = require('mongoose');
 //   db.connect(DB_URL);
 // }
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://jasmine1:jasmine1@nrlzone.yd574lc.mongodb.net/');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/NRLZone');
+    
+    //'mongodb+srv://jasmine1:jasmine1@nrlzone.yd574lc.mongodb.net/');
 
 
 // mongoose.connect(

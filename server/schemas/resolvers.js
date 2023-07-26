@@ -1,7 +1,6 @@
 const { Team, User, Post } = require('../models');
 const { signToken } = require('../utils/auth');
 const { AuthenticationError } = require('apollo-server-express');
-// const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const resolvers = {
   Query: {
@@ -17,20 +16,12 @@ const resolvers = {
     // },
     postbyteam: async (parent, {teamid}) => {
       return await Post.find({team: teamid}).populate('team');
-    }
+    },
+    post: async (parent, { postId }) => {
+      return Post.findOne({ _id: postId });
+    },
   },
 
-  // const session = await stripe.checkout.sessions.create({
-  //   payment_method_types: ['card'],
-  //   line_items,
-  //   mode: 'payment',
-  //   success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
-  //   cancel_url: `${url}/`,
-  // });
-  
-  // return { session: session.id };
-// },
-// },
 
   Mutation: {
 
@@ -63,7 +54,36 @@ const resolvers = {
         console.error('error');
         console.error(error);
       }
-      
+    },
+    // updateTeamPost: async (parent, { title, description, teamId, postId }) => {
+    //   try {
+    //     return (await Post.findByIdAndUpdate({ title, description, team: teamId, _id: postId}));
+    //     //{new: true}
+    //   } catch (error) {
+    //     console.error('error');
+    //     console.error(error);
+    //   }
+    // },
+    updateTeamPost: async (parent, { title, description, teamId, postId }) => {
+      try {
+        const updatedPost = await Post.findByIdAndUpdate(
+          postId,
+          { title, description, team: teamId },
+          { new: true }
+        );
+        return updatedPost;
+      } catch (error) {
+        console.error('error');
+        console.error(error);
+      }
+    },
+    deleteTeamPost: async (parent, { postId }) => {
+      try {
+        return (await Post.findOneAndDelete( {_id: postId}));
+      } catch (error) {
+        console.error('error');
+        console.error(error);
+      }
     },
   }
 };

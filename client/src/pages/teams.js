@@ -1,12 +1,18 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
+import { UpdatePostForm } from './updateTeam';
+import { DeletePostButton } from './deteleTeam';
+
+
 
 // import ThoughtList from '../components/ThoughtList';
 import TeamPostForm from '../components/teamPostForm';
 import { useEffect } from 'react';
 
 import { QUERY_THOUGHTBYTEAM } from '../utils/queries';
+
+
 
 const Team = () => {
   const { teamId } = useParams();
@@ -20,6 +26,8 @@ useEffect(() => {
 
 
 console.log("data",teamPosts);
+
+
 
   return (
     <main>
@@ -41,12 +49,14 @@ console.log("data",teamPosts);
             />
           )} */}
 
-<h4>Viewing posts for team {"...add team name...."}</h4>
+<h4>Viewing posts for your team </h4>
           <h5>Team Posts:</h5>
           {teamPosts.map((post) => (
             <div key={post.id}>
-              <h6>{post.title}</h6>
-              <p>{post.description}</p>
+              <h3>{post.title}</h3>
+          <h4>{post.description}</h4>
+          <UpdatePostForm post={post} />
+          <DeletePostButton post={post} />
               <hr />
             </div>
           ))}
@@ -57,5 +67,6 @@ console.log("data",teamPosts);
     </main>
   );
 };
+
 
 export default Team;

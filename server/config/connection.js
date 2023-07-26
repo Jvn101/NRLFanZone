@@ -1,15 +1,29 @@
 const mongoose = require('mongoose');
 // const { MongoClient, ServerApiVersion } = require('mongodb');
 
-mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb+srv://jasmine:<Jasmine14>@nrlfanzone.hvipevd.mongodb.net/?retryWrites=true&w=majority',
+const MONGO_HOSTNAME = process.env.MONGO_HOSTNAME;
+const MONGO_PORT = process.env.MONGO_PORT;
+const MONGO_DB = process.env.MONGO_DB;
 
-  //mongodb://127.0.0.1:27017/NRLZone
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+const DB_URL = `mongodb://${MONGO_HOSTNAME}:${MONGO_PORT}/${MONGO_DB}`
+
+
+if(process.env.NODE_ENV === 'production') {
+  db.connect(process.env.MONGODB_URI);
+} else {
+  db.connect(DB_URL);
+}
+
+
+// mongoose.connect(
+//   process.env.MONGODB_URI || 
+
+//   //mongodb://127.0.0.1:27017/NRLZone
+//   {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   }
+// );
 
 
 // // Create a MongoClient with a MongoClientOptions object to set the Stable API version

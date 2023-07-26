@@ -41,16 +41,23 @@ const typeDefs = gql`
   type Query {
     team: [Team]
     user: [User]
-    post: [Post]
+    
     postbyteam(teamid: ID!): [Post]
+    post(postId: ID!): Post
   }
 
 
   type Mutation {
     addTeamPost(title: String!, description: String!, teamId: ID!): Post
+    updateTeamPost(postId: ID!, title: String!, description: String!, teamId: ID!): Post
+    deleteTeamPost(postId: ID!, title: String!, description: String!, teamId: ID!): Post
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
   }
-`;
+`
+
+
+// removed from queries due to error 
+// post: [Post]
 
 module.exports = typeDefs;

@@ -35,3 +35,23 @@ export const ADD_TEAMPOST = gql`
     }
   }
 `;
+
+export const UPDATE_TEAMPOST = gql`
+mutation updateTeamPost($postId: ID!, $title: String!, $description: String!, $teamId: ID!) {
+  updateTeamPost(postId: $postId, title: $title, description: $description, teamId: $teamId) {
+    title,
+    description
+  }
+}
+}
+`;
+
+
+export const DELETE_TEAMPOST = gql`
+mutation deleteTeamPost($postId: ID!, $title: String!, $description: String!, $teamId: ID!) {
+  deleteTeamPost(postId: $postId, title: $title, description: $description, teamId: $teamId) {
+    title
+    description
+  }
+}
+`;

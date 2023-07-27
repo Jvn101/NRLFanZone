@@ -39,7 +39,7 @@ console.log("data",teamPosts);
           <h3>Teams List Page</h3>
           <TeamPostForm teamId={teamId}/>
         </div>
-        <div className="col-12 col-md-8 mb-3">
+        <div className="container">
           {/* {loading ? (
             <div>Loading...</div>
           ) : (
@@ -51,17 +51,18 @@ console.log("data",teamPosts);
 
 <h4>Viewing posts for your team </h4>
           <h5>Team Posts:</h5>
+          
           {teamPosts.map((post) => (
-            <div key={post.id}>
-              <h3>{post.title}</h3>
-          <h4>{post.description}</h4>
+            <div className='post-list post' key={post.id}>
+              <h3 className='poststyling'>{post.title}</h3>
+          <h4 className='poststyling'>{post.description}</h4>
           <UpdatePostForm post={post} />
           <DeletePostButton post={post} />
               <hr />
             </div>
           ))}
 
-          Viewing details for team {teamId}
+          {/* Viewing details for team {teamId} */}
         </div>
       </div>
     </main>

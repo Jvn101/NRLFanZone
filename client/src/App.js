@@ -13,6 +13,7 @@ import { Contact } from "./components/Contact";
 import {Projects} from "./components/Projects"
 import { NavBar } from './components/NavBar';
 import { Newsletter } from './components/Newsletter';
+import Profile from './pages/profile';
 
 
 const httpLink = createHttpLink({
@@ -64,7 +65,12 @@ function App() {
                 path='/teams/:teamId'
                 element={<Team/>}>
                 </Route>
+                <Route 
+                path='/me'
+                element={<Profile/>}>
+                </Route>
               </Routes>
+              
             </div>
             <Footer />
             {/* <Contact /> */}

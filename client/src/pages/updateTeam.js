@@ -34,8 +34,8 @@ export const UpdatePostForm = ({ post }) => {
     return (
         <div>
           <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
-          <textarea value={description} onChange={(e) => setDescription(e.target.value)} />
-          <button onClick={handleUpdate}>Update Post</button>
+          <input value={description} onChange={(e) => setDescription(e.target.value)} />
+          <button onClick={handleUpdate}>Update Post 🔄 </button>
         </div>
       );
     };

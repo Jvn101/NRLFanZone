@@ -19,7 +19,7 @@ export const DeletePostButton = ({ post, onDelete }) => {
         }
       };
       
-    return <button onClick={handleDelete}>Delete Post</button>;
+    return <button onClick={handleDelete}>Delete Post 🗑️ </button>;
     
   };
   

@@ -49,8 +49,8 @@ const typeDefs = gql`
 
   type Mutation {
     addTeamPost(title: String!, description: String!, teamId: ID!): Post
-    updateTeamPost(postId: ID!, title: String!, description: String!, teamId: ID!): Post
-    deleteTeamPost(postId: ID!, title: String!, description: String!, teamId: ID!): Post
+    updateTeamPost(postId: ID!, title: String!, description: String!, teamId: ID): Post
+    deleteTeamPost(postId: ID!, title: String, description: String, teamId: ID): Post
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
   }

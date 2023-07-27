@@ -24,7 +24,7 @@ const TeamPostForm = ({teamId}) => {
         variables: { ...formState, teamId },
       });
 
-      // window.location.reload();
+      window.location.reload();
     } catch (err) {
       console.error(err);
     }

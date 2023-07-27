@@ -37,7 +37,7 @@ export const Projects = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>NRL Teams</h2>
-                <p>Total attendance for Rugby League exceeds 3.17 million. The NRL record the codes highest ever crowd average for a regular season with on average 16,468 attending each game that season. The NRL holds the first ever Rugby League Grand Final in the competitions 98 year history involving no New South Wales teams.</p>
+                <p> Click on any team to join the discussion on all things NRL</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                  
@@ -47,7 +47,9 @@ export const Projects = () => {
                     <Row>
                       {Auth.loggedIn() ? (
             <>
+    
                       {
+                        
                         
                           teams && teams.map((team, index) => {
 
@@ -66,10 +68,12 @@ export const Projects = () => {
             <>
 
               <Link to='/register'>
-                <button className="vvd"><span>Members Area</span></button>
+                {/* <button className="vvd"><span>Members Area</span></button> */}
+                <h3 className="Login">Login to the members area for exclusive access to teams. 
+                You're one click away from KICK OFF!</h3>
               </Link>
               <div class= 'notLoggedIn'>
-              <h3>Login to the members area for KICK OFF!</h3>
+              
               </div>
               </>
           )}

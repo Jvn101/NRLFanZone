@@ -75,7 +75,7 @@ const Signup = (props) => {
 
 
   return (
-    <div className="auth-form-container App">
+    <div className="auth-form-container App User">
         <h2>Register</h2>
         <form className="login-form" onSubmit={handleFormSubmit}>
             <label htmlFor="email">username</label>
@@ -84,14 +84,14 @@ const Signup = (props) => {
             <input value={formState.email} onChange={handleChange}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
             <label htmlFor="password">password</label>
             <input value={formState.password} onChange={handleChange} type="password" placeholder="********" id="password" name="password" />
-            <button type="submit">Log In</button>
+            <button className="spacing" type="submit">Register</button>
         </form>
         {error && (
           <div className="my-3 p-3 bg-danger text-white">
             {error.message}
           </div>
         )}
-        <a href="/login"><button className="link-btn">Already an NRLFanZone Member</button></a>
+        <a href="/login"><button className="link-btn spacing">Already an NRLFanZone Member? Click here to login</button></a>
         {/* <button className="link-btn" onClick={() => props.onFormSwitch('Register')}>Don't have an account? Register here.</button> */}
         {/* { currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />} */}
     </div>

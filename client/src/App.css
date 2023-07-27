@@ -28,6 +28,7 @@
   color: #61dafb;
 }
 
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -47,7 +48,7 @@
   align-items: center;
   justify-content: center;
   color: white;
-  background-image: linear-gradient(79deg, #7439db, #C66FBC 48%, #F7944D);
+  background-image: linear-gradient(75deg,#56ab2f,#a8e063);
 }
 
 .auth-form-container, .login-form, .register-form {
@@ -681,7 +682,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .wrap-contact3 {
-  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
   background: #80c64a;
   background: -webkit-linear-gradient(45deg,#56ab2f,#a8e063);
   background: -o-linear-gradient(45deg,#56ab2f,#a8e063);
@@ -747,4 +750,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .poststyling {
   color: #808080;
+}
+
+.Login {
+  color: white;
+  text-align: center;
 }

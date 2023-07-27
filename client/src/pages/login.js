@@ -43,7 +43,7 @@ const Login = (props) => {
 
   return (
     
-     <div className="auth-form-container App">
+     <div className="auth-form-container App User">
         <div className="col-1 col-lg-3">
           <h4>Login</h4>
           <div className="">
